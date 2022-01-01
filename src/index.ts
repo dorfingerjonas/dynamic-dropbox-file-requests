@@ -21,7 +21,7 @@ app.get('/:path', (req, res) => {
     open: true
   })
     .then(response => {
-      console.log(`Created file-request "${ response.result.title}" (${ response.result.created })`);
+      console.log(`Created file-request "${ response.result.title }" (${ response.result.created })`);
       res.redirect(response.result.url);
     })
     .catch(error => {
