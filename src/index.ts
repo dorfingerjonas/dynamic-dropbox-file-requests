@@ -11,7 +11,7 @@ const dropboxClient = new Dropbox({
 });
 
 app.get('/', (req, res) => {
-  res.send('please use /:path');
+  res.redirect(process.env['DEFAULT_REDIRECT_URL'] || '/');
 });
 
 app.get('/:path', (req, res) => {
